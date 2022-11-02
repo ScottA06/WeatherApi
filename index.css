@@ -7,8 +7,8 @@ body {
     margin: 0;
     background: #222;
     background-image: url('https://source.unsplash.com/random/?landscape');
-    background-position: no-repeat fixed 0 -300px;
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card {
@@ -57,4 +57,27 @@ button:hover {
 
 h1 {
     margin: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    text-transform: capitalize;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Use the search bar to find the weather in a city";
+    color: white;
+    position: absolute;
+    top: 0;
 }
